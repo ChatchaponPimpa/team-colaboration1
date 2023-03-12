@@ -1,4 +1,4 @@
-import rendom
+import random
 
 R_EATING = "I don't like eating anything becayse I'm bot obviously!"
 
