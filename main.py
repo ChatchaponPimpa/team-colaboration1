@@ -1,11 +1,18 @@
 import re
 import long_responses as long
 
-daf message_probab
+def message_probability (user_message , recognised_words, single_response=False, required_words=[]):
+    message_certainty = 0
+    has_required_words = True
 
-def get_response(user_input):
-    split_message = re.split(r'\s+l[,;?!.-]\s-*',user_input.lower())
-    response = check_all_messages(split_message)
+    for word in user_message:
+        if word in recognised_words:
+            message_certainty += 1
+            
+
+def get_response (user_input):
+    split_message = re.split (r'\s+l[,;?!.-]\s-*',user_input.lower())
+    response = check_all_messages (split_message)
     return response
 
 # Testing the response system
